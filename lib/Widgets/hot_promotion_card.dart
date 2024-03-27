@@ -1,9 +1,11 @@
 import 'package:aviz/Features/Home/data/model/promotion.dart';
+import 'package:aviz/Util/number_extention.dart';
+import 'package:aviz/Widgets/chached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class HotPromoionCard extends StatelessWidget {
+class HotPromotionCard extends StatelessWidget {
   final Promotion promotion;
-  HotPromoionCard(this.promotion, {super.key});
+  HotPromotionCard(this.promotion, {super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,7 +42,7 @@ class HotPromoionCard extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)),
             ),
-            child: Image.network(promotion.thumbnailUrl),
+            child: CachedImage(imageUrl: promotion.thumbnailUrl),
           ),
           const SizedBox(height: 16),
           SizedBox(
@@ -50,7 +52,7 @@ class HotPromoionCard extends StatelessWidget {
               style: TextStyle(
                 color: Color(0xFF101828),
                 fontSize: 16,
-                fontFamily: 'Shabnam',
+                fontFamily: 'dana',
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -63,7 +65,7 @@ class HotPromoionCard extends StatelessWidget {
               style: TextStyle(
                 color: Color(0xFF98A2B3),
                 fontSize: 14,
-                fontFamily: 'Shabnam',
+                fontFamily: 'dana',
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -72,11 +74,11 @@ class HotPromoionCard extends StatelessWidget {
           Row(
             children: [
               Text(
-                promotion.price.toString(),
+                promotion.price.convertToPrice(),
                 style: TextStyle(
                   color: Color(0xFFE60023),
                   fontSize: 15,
-                  fontFamily: 'Shabnam',
+                  fontFamily: 'dana',
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -87,7 +89,7 @@ class HotPromoionCard extends StatelessWidget {
                 style: TextStyle(
                   color: Color(0xffE60023),
                   fontSize: 15,
-                  fontFamily: 'Shabnam',
+                  fontFamily: 'dana',
                   fontWeight: FontWeight.w500,
                 ),
               ),

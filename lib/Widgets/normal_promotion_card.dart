@@ -1,4 +1,6 @@
 import 'package:aviz/Features/Home/data/model/promotion.dart';
+import 'package:aviz/Util/number_extention.dart';
+import 'package:aviz/Widgets/chached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class NormalPromotionCard extends StatelessWidget {
@@ -37,7 +39,7 @@ class NormalPromotionCard extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(2)),
             ),
-            child: Image.network(promotion.thumbnailUrl),
+            child: CachedImage(imageUrl: promotion.thumbnailUrl),
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -51,7 +53,7 @@ class NormalPromotionCard extends StatelessWidget {
                     style: TextStyle(
                       color: Color(0xFF101828),
                       fontSize: 16,
-                      fontFamily: 'Shabnam',
+                      fontFamily: 'dana',
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -64,7 +66,7 @@ class NormalPromotionCard extends StatelessWidget {
                     style: TextStyle(
                       color: Color(0xFF98A2B3),
                       fontSize: 14,
-                      fontFamily: 'Shabnam',
+                      fontFamily: 'dana',
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -75,11 +77,11 @@ class NormalPromotionCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      promotion.price.toString(),
+                      promotion.price.convertToPrice(),
                       style: TextStyle(
                         color: Color(0xFFE60023),
                         fontSize: 15,
-                        fontFamily: 'Shabnam',
+                        fontFamily: 'dana',
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -90,7 +92,7 @@ class NormalPromotionCard extends StatelessWidget {
                       style: TextStyle(
                         color: Color(0xFF101828),
                         fontSize: 15,
-                        fontFamily: 'Shabnam',
+                        fontFamily: 'dana',
                         fontWeight: FontWeight.w500,
                       ),
                     ),

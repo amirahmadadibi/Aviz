@@ -54,6 +54,7 @@ class ViewContainer extends StatelessWidget {
                         'مشاهده همه',
                         style: TextStyle(
                             fontSize: 16,
+                            fontFamily: 'dana',
                             fontWeight: FontWeight.bold,
                             color: Color(0xffD0D5DD)),
                       ),
@@ -62,6 +63,7 @@ class ViewContainer extends StatelessWidget {
                         'آویز های داغ',
                         style: TextStyle(
                           fontSize: 18,
+                          fontFamily: 'dana',
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -97,7 +99,7 @@ class ViewContainer extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 20),
                             child: GestureDetector(
-                              child: HotPromoionCard(promotionList[index]),
+                              child: HotPromotionCard(promotionList[index]),
                             ),
                           );
                         },
@@ -116,6 +118,7 @@ class ViewContainer extends StatelessWidget {
                         'مشاهده همه',
                         style: TextStyle(
                             fontSize: 16,
+                            fontFamily: 'dana',
                             fontWeight: FontWeight.bold,
                             color: Color(0xffD0D5DD)),
                       ),
@@ -124,6 +127,7 @@ class ViewContainer extends StatelessWidget {
                         'آویز های اخیر',
                         style: TextStyle(
                           fontSize: 18,
+                          fontFamily: 'dana',
                           fontWeight: FontWeight.bold,
                         ),
                       ),
