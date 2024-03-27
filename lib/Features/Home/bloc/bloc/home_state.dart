@@ -7,10 +7,10 @@ final class HomeInitialState extends HomeState {}
 
 class HomeRequestSuccessState extends HomeState {
   Either<String, List<Promotion>> hotPromotions;
+  Either<String, List<Promotion>> latestPromotions;
 
-  HomeRequestSuccessState(this.hotPromotions);
+  HomeRequestSuccessState(
+      {required this.hotPromotions, required this.latestPromotions});
 }
 
-class HomeLaodingState extends HomeState{
-    
-}
+class HomeLaodingState extends HomeState {}

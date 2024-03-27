@@ -14,7 +14,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<HomeGetInitlizeData>((event, emit) async {
       emit(HomeLaodingState());
       var hotPromotionList = await homeRepository.getHotPromotion();
-      emit(HomeRequestSuccessState(hotPromotionList));
+      var latestPromotionList = await homeRepository.getLatesetPromotion();
+
+      emit(HomeRequestSuccessState(
+          hotPromotions: hotPromotionList,
+          latestPromotions: latestPromotionList));
     });
   }
 }

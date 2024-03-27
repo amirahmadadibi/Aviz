@@ -5,7 +5,7 @@ class Promotion {
   String title;
   String description;
   String thumbnailUrl;
-  double price;
+  int price;
 
   Promotion(
       {required this.id,
@@ -19,7 +19,8 @@ class Promotion {
         id: jsonObject['id'],
         title: jsonObject['name'],
         description: jsonObject['description'],
-        thumbnailUrl: '${StringConstants.baseUrl}files/${jsonObject['collectionId']}/${jsonObject['id']}/${jsonObject['thumbnail']}',
+        thumbnailUrl:
+            '${StringConstants.baseUrl}files/${jsonObject['collectionId']}/${jsonObject['id']}/${jsonObject['thumbnail']}',
         price: jsonObject['price']);
   }
 }

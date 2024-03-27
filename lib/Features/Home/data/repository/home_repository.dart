@@ -6,6 +6,8 @@ import 'package:dartz/dartz.dart';
 
 abstract class IHomeRepository {
   Future<Either<String, List<Promotion>>> getHotPromotion();
+    Future<Either<String, List<Promotion>>> getLatesetPromotion();
+
 }
 
 class HomeRepository extends IHomeRepository {
@@ -17,6 +19,16 @@ class HomeRepository extends IHomeRepository {
   Future<Either<String, List<Promotion>>> getHotPromotion() async {
     try {
       var response = await datasource.getHotPromotions();
+      return right(response);
+    } on ApiException catch (ex) {
+      return left(ex.message ?? 'خطا محتوای متنی ندارد');
+    }
+  }
+  
+  @override
+  Future<Either<String, List<Promotion>>> getLatesetPromotion() async {
+     try {
+      var response = await datasource.getLatestPromotions();
       return right(response);
     } on ApiException catch (ex) {
       return left(ex.message ?? 'خطا محتوای متنی ندارد');
