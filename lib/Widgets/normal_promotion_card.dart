@@ -50,12 +50,7 @@ class NormalPromotionCard extends StatelessWidget {
                   child: Text(
                     promotion.title,
                     textAlign: TextAlign.right,
-                    style: TextStyle(
-                      color: Color(0xFF101828),
-                      fontSize: 16,
-                      fontFamily: 'dana',
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -63,12 +58,7 @@ class NormalPromotionCard extends StatelessWidget {
                   child: Text(
                     promotion.description,
                     textAlign: TextAlign.right,
-                    style: TextStyle(
-                      color: Color(0xFF98A2B3),
-                      fontSize: 14,
-                      fontFamily: 'dana',
-                      fontWeight: FontWeight.w400,
-                    ),
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -78,24 +68,15 @@ class NormalPromotionCard extends StatelessWidget {
                   children: [
                     Text(
                       promotion.price.convertToPrice(),
-                      style: TextStyle(
-                        color: Color(0xFFE60023),
-                        fontSize: 15,
-                        fontFamily: 'dana',
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.labelMedium,
                     ),
                     Spacer(),
-                    Text(
-                      ':قیمت',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                        color: Color(0xFF101828),
-                        fontSize: 15,
-                        fontFamily: 'dana',
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
+                    Text(':قیمت',
+                        textAlign: TextAlign.right,
+                        style:
+                            Theme.of(context).textTheme.labelMedium!.copyWith(
+                                  color: Colors.black,
+                                )),
                   ],
                 ),
               ],

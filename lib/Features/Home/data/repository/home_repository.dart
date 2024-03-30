@@ -1,4 +1,3 @@
-import 'package:aviz/DI/di.dart';
 import 'package:aviz/Features/Home/data/datasource/home_datasource.dart';
 import 'package:aviz/Features/Home/data/model/promotion.dart';
 import 'package:aviz/NetworkUtil/api_exception.dart';
