@@ -2,6 +2,7 @@ import 'package:aviz/Features/Home/data/model/promotion.dart';
 import 'package:aviz/Features/Search/data/repository/search_repository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
+import 'package:flutter/material.dart';
 
 
 part 'search_event.dart';

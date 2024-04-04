@@ -8,9 +8,7 @@ final class SearchInitialState extends SearchState {}
 class SearchRequestSuccessState extends SearchState {
   Either<String, List<Promotion>> searchResult;
 
-  SearchRequestSuccessState(
-      {required this.searchResult});
+  SearchRequestSuccessState({required this.searchResult});
 }
 
 class SearchLaodingState extends SearchState {}
-

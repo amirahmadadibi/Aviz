@@ -4,6 +4,6 @@ part of 'search_bloc.dart';
 sealed class SearchEvent {}
 
 class SearchWithQueryData extends SearchEvent {
-    final String query; 
-    SearchWithQueryData({required this.query});
+  final String query;
+  SearchWithQueryData({required this.query});
 }
