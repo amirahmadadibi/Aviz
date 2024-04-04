@@ -14,7 +14,7 @@ class SerachRemoteDatasource extends ISearchDatasource {
   @override
   Future<List<Promotion>> getSearchResult(String query) async {
     try {
-      Map<String, dynamic> promotionQuery = {'filter': 'is_hot=true'};
+      Map<String, dynamic> promotionQuery = {'filter': 'name~"$query"'};
       var response = await _dio.get('collections/promotion/records',
           queryParameters: promotionQuery);
       return response.data['items']
