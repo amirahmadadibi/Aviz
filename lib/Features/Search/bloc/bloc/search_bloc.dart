@@ -9,7 +9,7 @@ part 'search_event.dart';
 part 'search_state.dart';
 
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
-  final SearchRepository searchRepository;
+  final ISearchRepository searchRepository;
   SearchBloc(this.searchRepository) : super(SearchInitialState()) {
     on<SearchWithQueryData>((event, emit) async {
       emit(SearchLaodingState());

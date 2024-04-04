@@ -8,7 +8,7 @@ abstract class ISearchRepository {
 }
 
 class SearchRepository extends ISearchRepository {
-  final SerachRemoteDatasource datasource;
+  final ISearchDatasource datasource;
 
   SearchRepository(this.datasource);
   
