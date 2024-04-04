@@ -1,6 +1,7 @@
 import 'package:aviz/Constants/color_constants.dart';
 import 'package:aviz/DI/di.dart';
 import 'package:aviz/Features/Home/view/home_screen.dart';
+import 'package:aviz/Features/Search/view/search_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'dana',
                 fontWeight: FontWeight.bold,
               ))),
-      home: const HomeScreen(),
+      home: SearchScreen(),
     );
   }
 }
